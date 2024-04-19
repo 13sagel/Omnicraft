@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "omnicraft",
+	"version": "${version}",
+	"name": "Omnicraft",
+	"description": "Mod designed around the world of the Cartoon Network show, Ben 10",
+	"authors": [
+		"Sagel"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/omnicraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.sagel.omnicraft.Omnicraft"
+		],"client": [
+			"net.sagel.omnicraft.OmnicraftClient"
+		],
+		"fabric-datagen": [
+			"net.sagel.omnicraft.OmnicraftDataGenerator"
+		]
+	},
+	"mixins": [
+		"omnicraft.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
