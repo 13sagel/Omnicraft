@@ -1,7 +1,8 @@
-package net.sagel.omnicraft.items;
+package net.sagel.omnicraft.materials;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.sagel.omnicraft.items.ItemRegistry;
 
 public class SilverMaterial implements ToolMaterial {
 

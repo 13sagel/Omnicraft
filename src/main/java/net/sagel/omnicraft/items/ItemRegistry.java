@@ -3,12 +3,16 @@ package net.sagel.omnicraft.items;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.sagel.omnicraft.Omnicraft;
+import net.sagel.omnicraft.materials.SilverArmorMaterial;
+import net.sagel.omnicraft.materials.SilverMaterial;
 
 
 public class ItemRegistry {
@@ -56,6 +60,8 @@ public class ItemRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register((itemGroup) -> itemGroup.add(ItemRegistry.SILVER_BOOTS));
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ItemRegistry.CHOCOLATE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ItemRegistry.EMPTY_SMOOTHIE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ItemRegistry.GRAPE_SMOOTHIE));
     }
 
     //BASE
@@ -92,4 +98,11 @@ public class ItemRegistry {
     //FOOD
     public static final Item CHOCOLATE = register(new Item(new FabricItemSettings()
             .food(new FoodComponent.Builder().hunger(3).snack().build())), "chocolate");
+    public static final Item EMPTY_SMOOTHIE = register(new Item(new FabricItemSettings()),"empty_smoothie");
+    public static final Item GRAPE_SMOOTHIE = register(new SmoothieItem(new FabricItemSettings()
+            .food(new FoodComponent.Builder().hunger(2)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 6*20, 1), 1f)
+                    .build())
+            .maxCount(1)), "grape_smoothie");
+
 }

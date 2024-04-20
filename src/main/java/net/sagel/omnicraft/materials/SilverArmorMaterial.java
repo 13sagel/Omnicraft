@@ -1,4 +1,4 @@
-package net.sagel.omnicraft.items;
+package net.sagel.omnicraft.materials;
 
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
@@ -6,6 +6,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.sagel.omnicraft.Omnicraft;
+import net.sagel.omnicraft.items.ItemRegistry;
 
 public class SilverArmorMaterial implements ArmorMaterial {
 
