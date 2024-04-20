@@ -34,13 +34,14 @@ public class ItemRegistry {
                     .displayName(Text.translatable("itemGroup.omnicraft"))
                     .entries((displayContext, entries) -> {
                         entries.add(ItemRegistry.OMNICRYSTAL);
+                        entries.add(ItemRegistry.OMNITRIXV1);
+                        entries.add(ItemRegistry.HERO_WATCH);
+                        entries.add(ItemRegistry.OMNITRIX_FACE);
                     }).build());
 
 
 
     public static void initialize() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register((itemGroup) -> itemGroup.add(ItemRegistry.OMNICRYSTAL));
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register((itemGroup) -> itemGroup.add(ItemRegistry.SILVER_INGOT));
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register((itemGroup) -> itemGroup.add(ItemRegistry.SILVER_SWORD));
@@ -60,6 +61,11 @@ public class ItemRegistry {
     //BASE
     public static final Item OMNICRYSTAL = register(new Item(new FabricItemSettings()), "omnicrystal");
     public static final Item SILVER_INGOT = register(new Item(new FabricItemSettings()), "silver_ingot");
+
+    //OMNITRIXES - Remember to remove "-1" in JSONs!!!!!!!!!!!!
+    public static final Item OMNITRIXV1 = register(new Item(new FabricItemSettings().maxCount(1)), "omnitrixv1");
+    public static final Item OMNITRIX_FACE = register(new Item(new FabricItemSettings()), "omnitrix_face");
+    public static final Item HERO_WATCH = register(new Item(new FabricItemSettings().maxCount(1)), "hero_watch");
 
     //TOOLS - attack damage = base + value + 1, speed = 4 + value
     public static final Item SILVER_SWORD = register(new SwordItem(SilverMaterial.INSTANCE, 3, -2.4f,
