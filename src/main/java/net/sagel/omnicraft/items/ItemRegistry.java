@@ -41,6 +41,8 @@ public class ItemRegistry {
                         entries.add(ItemRegistry.OMNITRIXV1);
                         entries.add(ItemRegistry.HERO_WATCH);
                         entries.add(ItemRegistry.OMNITRIX_FACE);
+                        entries.add(ItemRegistry.ELECTRICITY_CHARM);
+                        entries.add(ItemRegistry.LUCKY_CHARM);
                     }).build());
 
 
@@ -72,6 +74,9 @@ public class ItemRegistry {
     //BASE
     public static final Item OMNICRYSTAL = register(new Item(new FabricItemSettings()), "omnicrystal");
     public static final Item SILVER_INGOT = register(new Item(new FabricItemSettings()), "silver_ingot");
+
+    public static final Item ELECTRICITY_CHARM = register(new ElectricityCharmItem(new FabricItemSettings().maxCount(1)), "electricity_charm");
+    public static final Item LUCKY_CHARM = register(new LuckyCharmItem(new FabricItemSettings().maxCount(1)), "lucky_charm");
 
     //OMNITRIXES - Remember to remove "-1" in JSONs!!!!!!!!!!!!
     public static final Item OMNITRIXV1 = register(new Item(new FabricItemSettings().maxCount(1)), "omnitrixv1");
