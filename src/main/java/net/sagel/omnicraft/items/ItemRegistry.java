@@ -59,9 +59,14 @@ public class ItemRegistry {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register((itemGroup) -> itemGroup.add(ItemRegistry.SILVER_LEGGINGS));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register((itemGroup) -> itemGroup.add(ItemRegistry.SILVER_BOOTS));
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ItemRegistry.CHOCOLATE));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ItemRegistry.EMPTY_SMOOTHIE));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ItemRegistry.GRAPE_SMOOTHIE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ItemRegistry.GRASSHOPPER_SMOOTHIE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ItemRegistry.DOUBLEGGG_SMOOTHIE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ItemRegistry.LAMB_SARDINE_SMOOTHIE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ItemRegistry.CHOCOLATE_CARROT_SMOOTHIE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ItemRegistry.MANGO_BLUEBERRY_SMOOTHIE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register((itemGroup) -> itemGroup.add(ItemRegistry.NECTARINE_SMOOTHIE));
     }
 
     //BASE
@@ -96,13 +101,49 @@ public class ItemRegistry {
             new FabricItemSettings()), "silver_boots");
 
     //FOOD
-    public static final Item CHOCOLATE = register(new Item(new FabricItemSettings()
-            .food(new FoodComponent.Builder().hunger(3).snack().build())), "chocolate");
     public static final Item EMPTY_SMOOTHIE = register(new Item(new FabricItemSettings()),"empty_smoothie");
     public static final Item GRAPE_SMOOTHIE = register(new SmoothieItem(new FabricItemSettings()
-            .food(new FoodComponent.Builder().hunger(2)
-                    .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 6*20, 1), 1f)
+            .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.6f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 6*20, 1), 0.5f)
+                    .alwaysEdible()
                     .build())
             .maxCount(1)), "grape_smoothie");
+    public static final Item GRASSHOPPER_SMOOTHIE = register(new SmoothieItem(new FabricItemSettings()
+            .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.6f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 6*20, 1), 0.5f)
+                    .alwaysEdible()
+                    .build())
+            .maxCount(1)), "grasshopper_smoothie");
+    public static final Item DOUBLEGGG_SMOOTHIE = register(new SmoothieItem(new FabricItemSettings()
+            .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.6f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 6*20, 1), 0.5f)
+                    .alwaysEdible()
+                    .build())
+            .maxCount(1)), "doubleggg_smoothie");
+    public static final Item LAMB_SARDINE_SMOOTHIE = register(new SmoothieItem(new FabricItemSettings()
+            .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.6f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 6*20, 1), 0.5f)
+                    .alwaysEdible()
+                    .build())
+            .maxCount(1)), "lamb_sardine_smoothie");
+    public static final Item CHOCOLATE_CARROT_SMOOTHIE = register(new SmoothieItem(new FabricItemSettings()
+            .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.6f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 6*20, 1), 0.5f)
+                    .alwaysEdible()
+                    .build())
+            .maxCount(1)), "chocolate_carrot_smoothie");
+    public static final Item MANGO_BLUEBERRY_SMOOTHIE = register(new SmoothieItem(new FabricItemSettings()
+            .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.6f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, 6*20, 1), 0.5f)
+                    .alwaysEdible()
+                    .build())
+            .maxCount(1)), "mango_blueberry_smoothie");
+    public static final Item NECTARINE_SMOOTHIE = register(new SmoothieItem(new FabricItemSettings()
+            .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.6f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 6*20, 1), 0.5f)
+                    .alwaysEdible()
+                    .build())
+            .maxCount(1)), "nectarine_smoothie");
+
 
 }

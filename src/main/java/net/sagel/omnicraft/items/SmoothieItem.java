@@ -1,9 +1,7 @@
 package net.sagel.omnicraft.items;
 
-import net.minecraft.advancement.criterion.Criteria;
+
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.util.Hand;
@@ -15,7 +13,7 @@ public class SmoothieItem extends Item {
     public SmoothieItem(Settings settings) {super(settings);}
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        //ItemStack itemStack = super.finishUsing(stack, world, user);
+        ItemStack itemStack = super.finishUsing(stack, world, user);
         if (user instanceof PlayerEntity && !((PlayerEntity)user).getAbilities().creativeMode) {
             stack.decrement(1);
         }

@@ -19,7 +19,12 @@
   "item.omnicraft.silver_leggings": "Silver Leggings",
   "item.omnicraft.silver_boots": "Silver Boots",
 
-  "item.omnicraft.chocolate": "Chocolate",
   "item.omnicraft.empty_smoothie": "Mr. Smoothy cup",
-  "item.omnicraft.grape_smoothie": "Mr. Smoothy: Grape"
+  "item.omnicraft.grape_smoothie": "Mr. Smoothy: Grape",
+  "item.omnicraft.grasshopper_smoothie": "Mr. Smoothy: Grasshopper",
+  "item.omnicraft.doubleggg_smoothie": "Mr. Smoothy: Double Guava-Gumball-Gulp",
+  "item.omnicraft.lamb_sardine_smoothie": "Mr. Smoothy: Lamb and Sardine",
+  "item.omnicraft.chocolate_carrot_smoothie": "Mr. Smoothy: Carrot and Chocolate",
+  "item.omnicraft.mango_blueberry_smoothie": "Mr. Smoothy: Mango and Blueberry",
+  "item.omnicraft.nectarine_smoothie": "Mr. Smoothy: Nectarine"
 }

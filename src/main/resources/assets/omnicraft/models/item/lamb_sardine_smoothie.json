@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "omnicraft:item/chocolate"
+    "layer0": "omnicraft:item/lamb_sardine_smoothie"
   }
 }
