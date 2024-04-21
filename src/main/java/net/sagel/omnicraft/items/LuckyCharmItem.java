@@ -22,7 +22,7 @@ public class LuckyCharmItem extends Item {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         super.inventoryTick(stack, world, entity, slot, selected);
         if(entity instanceof PlayerEntity){
-            ((PlayerEntity)entity).addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 100, 3));
+            ((PlayerEntity)entity).addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 100, 3, false, false, true));
         }
     }
 }

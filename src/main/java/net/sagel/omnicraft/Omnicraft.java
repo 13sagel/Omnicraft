@@ -2,6 +2,7 @@ package net.sagel.omnicraft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.sagel.omnicraft.blocks.BlockRegistry;
 import net.sagel.omnicraft.items.ItemRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,5 +19,6 @@ public class Omnicraft implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 		ItemRegistry.initialize();
+		BlockRegistry.initialize();
 	}
 }

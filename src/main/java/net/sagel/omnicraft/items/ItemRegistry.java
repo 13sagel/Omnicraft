@@ -11,6 +11,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.sagel.omnicraft.Omnicraft;
+import net.sagel.omnicraft.blocks.BlockRegistry;
 import net.sagel.omnicraft.materials.SilverArmorMaterial;
 import net.sagel.omnicraft.materials.SilverMaterial;
 
@@ -38,11 +39,13 @@ public class ItemRegistry {
                     .displayName(Text.translatable("itemGroup.omnicraft"))
                     .entries((displayContext, entries) -> {
                         entries.add(ItemRegistry.OMNICRYSTAL);
+                        entries.add(BlockRegistry.OMNICRYSTAL_BLOCK);
                         entries.add(ItemRegistry.OMNITRIXV1);
                         entries.add(ItemRegistry.HERO_WATCH);
                         entries.add(ItemRegistry.OMNITRIX_FACE);
                         entries.add(ItemRegistry.ELECTRICITY_CHARM);
                         entries.add(ItemRegistry.LUCKY_CHARM);
+                        entries.add(BlockRegistry.GALVAN_DEBRIS);
                     }).build());
 
 

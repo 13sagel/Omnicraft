@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column_horizontal",
+  "textures": {
+    "end": "omnicraft:block/galvan_debris_top",
+    "side": "omnicraft:block/galvan_debris_side"
+  }
+}
